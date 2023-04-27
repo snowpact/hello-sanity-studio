@@ -74,7 +74,7 @@ export class HelloSanityStudio {
 
     const settingsView = settingsList.map((item) => createSingletonView(S, item));
     const groupOneView = groupOneList.map((item) => createListView(S, item));
-    const groupTwoView = groupTwoList.map((item) => createListView(S, item));
+    const groupTwoView = groupTwoList.map((item) => createOrderableView(S, item, context));
 
     return [...settingsView, S.divider(), ...groupOneView, S.divider(), ...groupTwoView];
   }

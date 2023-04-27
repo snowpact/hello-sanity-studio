@@ -26,7 +26,7 @@ Make sure to also install the "@sanity/code-input" dependency for this plugin to
 
 ```css
 yarn add @sanity/code-input
-npm install @sanity/code-input
+npm install @sanity/code-input // if you need `initCodeBlocks`
 ```
 
 ## Setup
@@ -39,18 +39,16 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {unsplashImageAsset} from 'sanity-plugin-asset-source-unsplash'
 
-import {codeInput} from '@sanity/code-input'
+import {codeInput} from '@sanity/code-input'  // <- this is needed if you uses `initCodeBlocks`
 
-import {
-  filterOutSingletonActions,
-  getHelloDesk,
-  getHelloSchemaTypes,
-  helloTheme,
-} from 'hello-sanity-studio'
+import { HelloSanityStudio } from 'hello-sanity-studio'
+
+const helloSanityStudio = new HelloSanityStudio({
+  expertiseCategories,
+  initCodeBlocks: false,
+})
 
 export default defineConfig({
-  theme: helloTheme, // <- if you want to use some cool theme
-
   name: 'default',
   title: 'PROJECT_NAME',
 
@@ -58,23 +56,23 @@ export default defineConfig({
   dataset: 'PROJECT_DATASET',
 
   schema: {
-    types: getHelloSchemaTypes(), // <- here
+    types: helloSanityStudio.getSchemaTypes(), // <- here
   },
 
   plugins: [
-    codeInput(), // <- this is needed
+    codeInput(), // <- this is needed if you uses `initCodeBlocks`
     unsplashImageAsset(),
     deskTool({
       title: 'DESK_VIEW_TITLE',
-      structure: (S, context) => {
-        return S.list().title('Tableau de bord').items(getHelloDesk(S, context)) // <- here
+       structure: (S, context) => {
+        return S.list().title('Dashboard').items(helloSanityStudio.generateDesk(S, context))  // <- here
       },
     }),
     visionTool(),
   ],
 
   document: {
-    actions: (input, context) => filterOutSingletonActions(input, context), // <- here
+    actions: (input, context) => helloSanityStudio.filterOutSingletonActions(input, context), // <- here
   },
 })
 ```
