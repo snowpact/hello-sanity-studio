@@ -1,6 +1,6 @@
 {
   "name": "hello-sanity-studio",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Sanity plugin that helps you quickly set up a default Sanity Studio desk.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,7 +10,8 @@
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "build": "tsc && npm run copy-css",
+    "copy-css": "yarn copyfiles -f ./src/styles/*.css ./lib/styles/",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -35,6 +36,7 @@
     "sanity": "^3.8.3"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "prettier": "^2.8.7",
     "react-icons": "^4.8.0",
     "sanity": "^3.8.3",

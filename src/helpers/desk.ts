@@ -11,7 +11,6 @@ import {
 } from '../schemas';
 import { IconType } from 'react-icons';
 
-import './global.css';
 import { StructureBuilder, StructureResolverContext } from 'sanity/desk';
 import { DocumentActionComponent, DocumentActionsContext } from 'sanity';
 import { createListView, createOrderableView, createSingletonView } from './deskItem';
