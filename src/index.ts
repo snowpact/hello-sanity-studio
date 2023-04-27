@@ -1,9 +1,1 @@
-export { default as blockContent } from './types/blockContent';
-export { default as editorialSettings } from './schemas/editorialSettings';
-export { default as expertise } from './schemas/expertise';
-export { default as pageContent } from './schemas/pageContent';
-export { default as pageSettings } from './schemas/pageSettings';
-export { default as post } from './schemas/post';
-export { default as project } from './schemas/project';
-export { default as siteSettings } from './schemas/siteSettings';
-export { default as team } from './schemas/team';
+export { HelloSanityStudio } from './helpers/desk';

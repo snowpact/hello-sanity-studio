@@ -1,6 +1,6 @@
 {
   "name": "hello-sanity-studio",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Sanity plugin that helps you quickly set up a default Sanity Studio desk.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/snowpact/hello-sanity-studio#readme",
   "peerDependencies": {
+    "@sanity/orderable-document-list": "^0.99.0",
     "react-icons": "^4.8.0",
     "sanity": "^3.8.3"
   },
@@ -44,5 +45,8 @@
     "printWidth": 100,
     "bracketSpacing": true,
     "singleQuote": true
+  },
+  "dependencies": {
+    "@sanity/orderable-document-list": "^1.0.4"
   }
 }

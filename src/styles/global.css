@@ -1,0 +1,9 @@
+/* Hides "All fields" tab for documents with multiple group tags */
+button[title="All fields"][data-testid="group-tab-"] {
+    display: none !important
+}
+
+/* Hides generic "New document..." button next to search bar (prevents user from creating new singleton document) */
+button[aria-label="New document…"] {
+    display: none !important
+}
