@@ -30,10 +30,14 @@ const singletonTypes: Set<string> = new Set([
   editorialSettings.name,
 ]);
 
+export interface HelloSanityStudioOptions {
+  expertiseCategories: ListOptions;
+}
+
 export class HelloSanityStudio {
   private schemas: any[] = [];
 
-  constuctor({ expertiseCategories }: { expertiseCategories: ListOptions }) {
+  constructor({ expertiseCategories }: HelloSanityStudioOptions) {
     this.schemas = [
       editorialSettings,
       pageSettings,
@@ -65,7 +69,7 @@ export class HelloSanityStudio {
 
   // For singleton types, filter out actions that are not explicitly included
   // in the `SINGLETON_ACTIONS` list defined above
-  filterOutSINGLETON_ACTIONS(input: DocumentActionComponent[], context: DocumentActionsContext) {
+  filterOutSingletonActions(input: DocumentActionComponent[], context: DocumentActionsContext) {
     return singletonTypes.has(context.schemaType)
       ? input.filter(({ action }) => action && SINGLETON_ACTIONS.has(action))
       : input;
