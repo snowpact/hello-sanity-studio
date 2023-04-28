@@ -1,8 +1,9 @@
 import { FaCubes } from 'react-icons/fa';
 import { defineField, defineType } from 'sanity';
-import { ListOptions } from '../models/typeList';
 
 export const EXPERTISE_SCHEMA_ID = 'expertise';
+
+export type ListOptions = { title: string; value: string }[];
 
 export const buildExpertiseSchema = ({
   expertiseCategories,

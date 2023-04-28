@@ -3,7 +3,6 @@ import { IconType } from 'react-icons';
 import { StructureBuilder, StructureResolverContext } from 'sanity/desk';
 import { DocumentActionComponent, DocumentActionsContext } from 'sanity';
 import { createListView, createOrderableView, createSingletonView } from './deskItem';
-import { ListOptions } from '../models/typeList';
 import { SITE_SETTINGS_SCHEMA_ID, buildSiteSettingsSchema } from '../schemas/siteSettings';
 import { PAGE_SETTINGS_SCHEMA_ID, buildPageSettingsSchema } from '../schemas/pageSettings';
 import {
@@ -13,7 +12,7 @@ import {
 import { POST_SCHEMA_ID, buildPostSchema } from '../schemas/post';
 import { PROJECT_SCHEMA_ID, buildProjectSchema } from '../schemas/project';
 import { TEAM_SCHEMA_ID, buildTeamSchema } from '../schemas/team';
-import { EXPERTISE_SCHEMA_ID, buildExpertiseSchema } from '../schemas/expertise';
+import { EXPERTISE_SCHEMA_ID, ListOptions, buildExpertiseSchema } from '../schemas/expertise';
 import { buildPageContentSchema } from '../schemas/pageContent';
 import { buildBlockContentType } from '../types/blockContent';
 
