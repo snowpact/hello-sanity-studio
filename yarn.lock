@@ -1014,7 +1014,7 @@
     get-it "^8.0.9"
     pkg-dir "^5.0.0"
 
-"@sanity/client@5", "@sanity/client@^5.2.0", "@sanity/client@^5.4.2":
+"@sanity/client@^5.2.0", "@sanity/client@^5.4.2":
   version "5.4.2"
   resolved "https://registry.npmjs.org/@sanity/client/-/client-5.4.2.tgz#253b11d76a058de1fe6ec4f191d5872c7825fa80"
   integrity sha512-M/ebzTGwYq+NDGMfBWxKtwtmCRJbBvXxAIQXu/J0vxnr8mXKw8gBQ7GaG0tI4WJ54w5sI6pnrD6mPiKdRHVNYw==
@@ -1064,7 +1064,7 @@
   resolved "https://registry.npmjs.org/@sanity/generate-help-url/-/generate-help-url-3.0.0.tgz#60e9cba61b82103ea3761730a53cd9310b98892d"
   integrity sha512-wtMYcV5GIDIhVyF/jjmdwq1GdlK07dRL40XMns73VbrFI7FteRltxv48bhYVZPcLkRXb0SHjpDS/icj9/yzbVA==
 
-"@sanity/groq-store@2.1.0", "@sanity/groq-store@^2.1.0":
+"@sanity/groq-store@^2.1.0":
   version "2.1.0"
   resolved "https://registry.npmjs.org/@sanity/groq-store/-/groq-store-2.1.0.tgz#a7ddd25399bdc8469362384107a68386caa8db98"
   integrity sha512-GYWtsi0TyTOXiFbGmlPccKE/UsFom9byU8DpPsshNpD0z2MNy19/L0lAaV5/JdUgb8uu84sEKYMPumkRG94lhw==
@@ -1174,15 +1174,6 @@
     lodash "^4.17.21"
     slate "0.81.1"
 
-"@sanity/preview-kit@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.npmjs.org/@sanity/preview-kit/-/preview-kit-1.4.0.tgz#88e59fc42b713868f4c33cfdc575b5c68671b824"
-  integrity sha512-jEOZjmlKLKShH+92cQf0DLisfgnRrNEZPEiWFItztNocsZIppC8Pzo6Ch2LaCb+1cXxqxCfzxSfEQwkeTn6zLA==
-  dependencies:
-    "@sanity/eventsource" "5"
-    "@sanity/groq-store" "2.1.0"
-    suspend-react "0.0.9"
-
 "@sanity/schema@3.8.3":
   version "3.8.3"
   resolved "https://registry.npmjs.org/@sanity/schema/-/schema-3.8.3.tgz#2fa40d11522da035593dcbc1e7cf4e80edc78981"
@@ -1276,14 +1267,6 @@
     date-fns "^2.26.1"
     lodash "^4.17.21"
     rxjs "^7.8.0"
-
-"@sanity/webhook@2":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@sanity/webhook/-/webhook-2.0.0.tgz#22e5916fd6ea616625b4105a68f2858408de8eee"
-  integrity sha512-KusHeWVy6yW3hcgVHbGx6qVv//bUj3CD9Nr0EOw086+mo/ESrUV21HjOCrNQ+AYqXvJ9H5qhqmMiuc8H5dXUGA==
-  dependencies:
-    base64url "^3.0.1"
-    tslib "^2.3.1"
 
 "@sinclair/typebox@^0.25.16":
   version "0.25.24"
@@ -1736,11 +1719,6 @@ base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
-
-base64url@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/base64url/-/base64url-3.0.1.tgz#6399d572e2bc3f90a9a8b22d5dbb0a32d33f788d"
-  integrity sha512-ir1UPr3dkwexU7FdV8qBBbNDRUhMmIekYMFZfi+C/sLNnRESKPl23nB9b2pltqfOQNnGzsDdId90AEtG5tCx4A==
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -3926,16 +3904,6 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-sanity@^4.1.8:
-  version "4.1.8"
-  resolved "https://registry.npmjs.org/next-sanity/-/next-sanity-4.1.8.tgz#604ace96d589b8f6a749762448870dc5ee90083f"
-  integrity sha512-N5ImYpdni1o1vG3b283pVhA9saGaYXpRVvJ9yV0i9Pphc+cQtA/Qjq1W+1O126H/83IUepZVmLCwksSvAsXNKQ==
-  dependencies:
-    "@sanity/client" "5"
-    "@sanity/preview-kit" "1.4.0"
-    "@sanity/webhook" "2"
-    groq "3"
-
 node-int64@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
@@ -5078,11 +5046,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
-
-suspend-react@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/suspend-react/-/suspend-react-0.0.9.tgz#329072e330be9dc5cc97d1e3a563d542460c3ee5"
-  integrity sha512-668Pxy4z54fhjpnPqw6olj3vvpV03VywFNXazyNSYSTuHaRw3NJJjO5l8R49AUk5fMTkJXGVGaaVSgdaO01S3w==
 
 symbol-tree@^3.2.4:
   version "3.2.4"
